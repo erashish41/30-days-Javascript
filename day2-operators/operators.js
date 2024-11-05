@@ -33,16 +33,36 @@ console.log(c5)
 
 
 // Activity 2: Assignment Operators
+// we can't use -=/+= operator with const variable
 // Task 6: Use the += operator to add a number to a variable and log the result to the console.
-let a1 = 80;
+var a1 = 80;
 a1 += 12;
 console.log(a1)
 
+// Task 7: Use the -= operator to subtract a number from a variable and log the result to the console.
+let b1 = 890;
+b1 -= 350;
+console.log(b1);
 
-// • Task 7: Use the -= operator to subtract a number from a variable and log the result to the console.
+
 // Activity 3: Comparison Operators
-// • Task 8: Write a program to compare two numbers using > and < and log the result to the console.
-// • Task 9: Write a program to compare two numbers using >= and <= and log the result to the console.
+// Task 8: Write a program to compare two numbers using > and < and log the result to the console.
+function num(d1, e1){
+    if(d1 > e1){
+        console.log(`${d1} is greater than ${e1}`);
+    }if (d1 < e1) {
+        console.log(`${d1} is smaller than ${e1}`);
+    } else {
+        console.log(`${d1} is equal to ${e1}`);
+    }
+}
+num(80,80)
+
+
+// Task 9: Write a program to compare two numbers using >= and <= and log the result to the console.
+
+
+
 // • Task 10: Write a program to compare two numbers using == and === and log the result to the console.
 // Activity 4: Logical Operators
 // • Task 11: Write a program that uses the && operator to combine two conditions and log the result to the console.
