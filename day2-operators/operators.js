@@ -88,8 +88,33 @@ compare3(12, "99")
 
 
 // Activity 4: Logical Operators
-// • Task 11: Write a program that uses the && operator to combine two conditions and log the result to the console.
-// • Task 12: Write a program that uses the || operator to combine two conditions and log the result to the console.
+// Task 11: Write a program that uses the && operator to combine two conditions and log the result to the console.
+// let num7 = 400;
+// let num8 = 500;
+const compare4 = (num7, num8) => {
+    if((num7 != num8) && (num7 > num8)){
+        return(`${num7} is greater than ${num8}`);
+    }if((num7 != num8) && (num7 < num8)){
+        return(`${num7} is smaller than ${num8}`);    
+    }else{
+        return(`${num7} is invalid number ${num8}`);   
+    }
+}
+console.log(compare4(800, 500));
+
+// Task 12: Write a program that uses the || operator to combine two conditions and log the result to the console.
+const compare5 = (num9, num10) => {
+    if((num9 > num10) || (num9 != num10)){
+        return(`${num9} is greater than ${num10}`);
+    }if((num9 < num10) || (num9 != num10)){
+        return(`${num9} is smaller than ${num10}`);    
+    }else{
+        return(`${num9} is invalid number ${num10}`);   
+    }
+}
+console.log(compare5(100, 500));
+
+
 // • Task 13: Write a program that uses the ! operator to negate a condition and log the result to the console.
 // Activity 5: Ternary Operator
 // • Task 14: Write a program that uses the ternary operator to check if a number is positive or negative and log the result to the console.
