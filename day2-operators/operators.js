@@ -47,23 +47,46 @@ console.log(b1);
 
 // Activity 3: Comparison Operators
 // Task 8: Write a program to compare two numbers using > and < and log the result to the console.
-function num(d1, e1){
-    if(d1 > e1){
-        console.log(`${d1} is greater than ${e1}`);
-    }if (d1 < e1) {
-        console.log(`${d1} is smaller than ${e1}`);
-    } else {
-        console.log(`${d1} is equal to ${e1}`);
+function compare1 (num1, num2) {
+    if(num1 > num2){
+        console.log(`${num1} is greater than ${num2}`);   
+    }
+    else if(num1 < num2){
+        console.log(`${num1} is smaller than ${num2}`);   
+    }
+    else{
+        console.log(`${num1} is equal to ${num2}`);   
     }
 }
-num(80,80)
-
+compare1(2,3)
 
 // Task 9: Write a program to compare two numbers using >= and <= and log the result to the console.
+function compare2 (num3, num4) {
+    if(num3 >= num4){
+        console.log(`${num3} is greater or equal than ${num4}`);   
+    }
+    else if(num3 <= num4){
+        console.log(`${num3} is smaller or equal than ${num4}`);   
+    }
+    else{
+        console.log(`${num3} is invalid number ${num4}`);   
+    }
+}
+compare2(12,12)
+
+// Task 10: Write a program to compare two numbers using == and === and log the result to the console.
+function compare3 (num5, num6){
+    if(num5 === num6){
+        console.log(`${num5} is equal to ${num6} and of same data type `);
+    }if(num5 == num6){
+        console.log(`${num5} is equal to ${num6} and of different data type`);    
+    }else{
+        console.log(`${num5} is invalid number ${num6}`);   
+    }
+}
+compare3(12, "99")
 
 
-
-// • Task 10: Write a program to compare two numbers using == and === and log the result to the console.
 // Activity 4: Logical Operators
 // • Task 11: Write a program that uses the && operator to combine two conditions and log the result to the console.
 // • Task 12: Write a program that uses the || operator to combine two conditions and log the result to the console.
