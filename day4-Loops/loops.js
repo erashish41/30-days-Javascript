@@ -3,6 +3,11 @@
 for(let num1 = 0; num1 <= 10; num1++){
     console.log(num1);
 }
+
+// for(let num1 = 10; num1 > 0; num1--){
+//     console.log(num1);
+// }
+
 // // with function
 // function findList(){
 //     for (let index = 0; index <= 10; index++) {
@@ -27,6 +32,11 @@ while(num3 <= 10){
     num3 ++;
 }
 console.log("sum of numbers is: ", sum);
+
+// Task 4: Write a program to print the number from 10 to 1 using a while loop.
+for(let i = 10; i > 0; i--){
+    console.log(i);
+}
 
 
 // Activity 3: Do...While Loop
