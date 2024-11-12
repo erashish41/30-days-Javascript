@@ -34,13 +34,36 @@ while(num3 <= 10){
 console.log("sum of numbers is: ", sum);
 
 // Task 4: Write a program to print the number from 10 to 1 using a while loop.
-for(let i = 10; i > 0; i--){
-    console.log(i);
+let num4 = 10;
+while (num4 > 0) {
+    num4 --;
+    console.log(num4);
+
 }
 
 
 // Activity 3: Do...While Loop
-// Task 5: Vite a program to caritate the factoria of stad us nail o ile 00p.
+// Task 5: Write a program to print the number from 1 to 5 using a do while loop.
+let num5 = 5;
+do{
+    console.log(num5);
+    num5--
+}
+while( num5 >= 1);
+
+
+// Task 5: Write a program to calculate the factoria of number using a do while loop.
+let num6 = 4;
+let factorial = 1;
+do{
+    factorial*=1;
+    num6--
+}
+while(num6 > 0);
+console.log(num6);
+
+
+
 // Activity 4: Nested Loops
 // • Task 7: Write a program to print a pattern using nested for loops:
 // (ignore color)
