@@ -97,5 +97,25 @@ function multiply(a,b,c){
 console.log(multiply(9, 1, -9));
 
 // 2. to find different methods
-const num7 = [9, 3, 6, 1, 0, 4, 2, 7];
+// a. accesending sort 
+const num7 = [9, 3, 6, 1, 0, 4, 2, 17];
+const sortNum1 = num7.sort((x, y) => x - y);
+console.log(sortNum1);
+
+// b. decending sort
+const sortNum2 = num7.sort((x,y) => y - x);
+console.log(sortNum2);
+
+// c. Find the Largest and Smallest Number
+let largeNum = num7[0];
+for(let i = 0; i < num7.length; i++){
+    if(num7[i] > largeNum){
+        largeNum = num7[i]
+    }
+}
+console.log(largeNum);
+
+const max1 = Math.max(...num7)
+console.log(max1);
+
 
