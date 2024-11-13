@@ -82,3 +82,20 @@ console.log(num6);
 // 2. Multiplication Table Script: Create a script that prints the multiplication table of 5 using a for loop.
 // 3. Pattern Printing Script: Write a script that prints a pattern of stars using nested loops.
 // 1 Cum Calculation Carint. Writo a corint that calculator the cum of numhare from 1 to 10 ucina a while lann
+
+
+// 1. Write a JavaScript conditional statement to find the sign of the product of three numbers. Display an alert box with the specified sign.
+function multiply(a,b,c){
+    let product1 = a * b * c;
+
+    if(product1 >= 0){
+        return ("sign is positive");
+    }else{
+        return ("sign is negative");
+    }
+}
+console.log(multiply(9, 1, -9));
+
+// 2. to find different methods
+const num7 = [9, 3, 6, 1, 0, 4, 2, 7];
+
