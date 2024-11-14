@@ -146,20 +146,36 @@ console.log(arrNum);
 let evenNum1 = num7.filter((x => x%2 === 0));
 console.log(evenNum1.sort());
 
-//  other method
+// a.  other method 
 const numberSeries = [2,6,3,2,1,0,51,6,90,5,6,7,88]
 let evenNum2 = [];
 let oddNum2 = [];
 for(let i=0; i<numberSeries.length; i++){
     let currentNum = numberSeries[i];
     if(currentNum%2===0){
-        return numberSeries[i] = evenNum2;
+        evenNum2.push(currentNum);
     }else{
-        return numberSeries[i] = oddNum2;
+        oddNum2.push(currentNum);
     }
 }
 console.log(evenNum2, oddNum2);
 
+// b.
+let evenNum3 = [];
+let oddNum3 = [];
+let firstEven = 0;
+let firstOdd = 0;
+for(let i=0; i<numberSeries.length; i++){
+    let currItem = numberSeries[i];
+    if(currItem%2===0){
+        evenNum3[firstEven] = currItem;
+        firstEven++;
+    }else{
+        oddNum3[firstOdd] = currItem;
+        firstOdd++;
+    }
+}
+console.log(evenNum3, oddNum3);
 
 
 // h. odd
