@@ -106,16 +106,74 @@ console.log(sortNum1);
 const sortNum2 = num7.sort((x,y) => y - x);
 console.log(sortNum2);
 
-// c. Find the Largest and Smallest Number
-let largeNum = num7[0];
-for(let i = 0; i < num7.length; i++){
-    if(num7[i] > largeNum){
-        largeNum = num7[i]
+// c. Find the Largest Number
+function hello(){
+    let largeNum = num7[0];
+    for(let i = 0; i < num7.length; i++){
+        if(num7[i] > largeNum){
+            largeNum = num7[i]
+        }
     }
+    console.log(largeNum);
 }
-console.log(largeNum);
+hello()
 
 const max1 = Math.max(...num7)
 console.log(max1);
 
+// d. find Smallest Number  ||  const num7 = [9, 3, 6, 1, 0, 4, 2, 17];
+let smaleNum = num7[0];
+for(let i = 0; i < num7.length; i++){
+    if(num7[i] < smaleNum){
+        smaleNum = num7[i];
+    }
+}
+console.log(smaleNum);
+
+const min1 = Math.min(...num7);
+console.log(min1);
+
+// e. calculate sum  
+let sumNum = 0;
+let total = num7.reduce((acc,num) =>acc + num, 0 )
+console.log(total);
+
+// f. average 
+let arrNum = total/ (num7.length);
+console.log(arrNum);
+
+// g. even
+let evenNum1 = num7.filter((x => x%2 === 0));
+console.log(evenNum1.sort());
+
+//  other method
+const numberSeries = [2,6,3,2,1,0,51,6,90,5,6,7,88]
+let evenNum2 = [];
+let oddNum2 = [];
+for(let i=0; i<numberSeries.length; i++){
+    let currentNum = numberSeries[i];
+    if(currentNum%2===0){
+        return numberSeries[i] = evenNum2;
+    }else{
+        return numberSeries[i] = oddNum2;
+    }
+}
+console.log(evenNum2, oddNum2);
+
+
+
+// h. odd
+let oddNum = num7.filter((y) => y % 2 !== 0)
+console.log(oddNum.sort());
+
+// i. Check if an Element Exists
+let existNum = num7.includes(6);
+console.log(existNum);
+
+let indexNum = num7.indexOf(6);
+console.log(indexNum);
+
+// j. reverse the array
+let reverseNum = num7.reverse();
+console.log(reverseNum);
 
