@@ -193,3 +193,10 @@ console.log(indexNum);
 let reverseNum = num7.reverse();
 console.log(reverseNum);
 
+// k. greater or smaller
+let greatNum = num7.filter((x) => x > 5)
+console.log("great part ", greatNum);
+
+let smallNum = num7.filter((x) => x < 5)
+console.log("small part ",smallNum);
+
