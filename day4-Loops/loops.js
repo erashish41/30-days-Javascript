@@ -200,3 +200,29 @@ console.log("great part ", greatNum);
 let smallNum = num7.filter((x) => x < 5)
 console.log("small part ",smallNum);
 
+// l. Count Occurrences of Each Number   || const num7 = [9, 3, 6, 1, 0, 4, 2, 17];
+const occureNum = num7.reduce((acc, curr) => {
+    acc[curr] = (acc[curr]|| 0 + 1);
+    return acc;
+}, {})
+console.log(occureNum);
+
+// m. diff btw maxNum and minNum
+let maxNum2 = num7[0];
+let minNum2 = num7[0];
+for (let i = 0; i < num7.length; i++) {
+    if(num7[i] > maxNum2){
+        maxNum2 = num7[i];
+    }else{
+        minNum2 = num7[i]
+    }
+}
+console.log(maxNum2, minNum2);
+const diff = maxNum2 * minNum2;
+console.log(diff);
+
+
+// n. unique and duplicate
+// A Set is a quick and simple way to remove duplicates from an array.
+const uniq = [...new Set(num7)]
+console.log(uniq);
