@@ -226,3 +226,11 @@ console.log(diff);
 // A Set is a quick and simple way to remove duplicates from an array.
 const uniq = [...new Set(num7)]
 console.log(uniq);
+
+// The indexOf() method returns the first index at which a given element (num) is found in the array.
+const duplicate = num7.filter((num, index, arr) => arr.indexOf(num) !== index)
+console.log(duplicate);
+
+
+
+// o. 
