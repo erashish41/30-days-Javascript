@@ -233,4 +233,10 @@ console.log(duplicate);
 
 
 
-// o. 
+// o. 12. Add a Number to Each Element
+const addTwo = num7.map(num => num + 2);
+console.log(addTwo);
+
+// p. square each number 
+const square1 = num7.map(num => num * num);
+console.log(square1);
