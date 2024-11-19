@@ -218,7 +218,7 @@ for (let i = 0; i < num7.length; i++) {
     }
 }
 console.log(maxNum2, minNum2);
-const diff = maxNum2 * minNum2;
+const diff = maxNum2 - minNum2;
 console.log(diff);
 
 
@@ -228,7 +228,7 @@ const uniq = [...new Set(num7)]
 console.log(uniq);
 
 // The indexOf() method returns the first index at which a given element (num) is found in the array.
-const duplicate = num7.filter((num, index, arr) => arr.indexOf(num) !== index)
+const duplicate = num7.filter((num, index, arr) => arr.indexOf(num))
 console.log(duplicate);
 
 
