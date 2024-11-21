@@ -240,3 +240,36 @@ console.log(addTwo);
 // p. square each number 
 const square1 = num7.map(num => num * num);
 console.log(square1);
+
+
+const aaa = [...num7].sort((a,b) => a - b);
+console.log(aaa);
+const bbb = num7.sort((a,b) => b - a);
+console.log(bbb);
+
+
+
+function mobile(){
+    let largeMobile = num7[0];
+    for(let i = 0; i< num7.length; i++){
+        if(num7[i] < largeMobile){
+            largeMobile = num7;
+        }
+    }
+    console.log(largeMobile);
+}
+mobile();
+
+
+// q. find the number which is written only once among the arr, with the help of function and pass this arr in it
+function findUniqueNumbers(arr) {
+    const countMap = arr.reduce((acc, num) => {
+      acc[num] = (acc[num] || 0) + 1; // Count occurrences of each number
+      return acc;
+    }, {});
+  
+    // Filter numbers that appear only once
+    return Object.keys(countMap)
+      .filter(key => countMap[key] === 1)
+      .map(Number); // Convert keys back to numbers
+  }
