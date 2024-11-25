@@ -62,13 +62,64 @@ const result5 = sum1(num5, num6);
 console.log(`sum of ${num5} and ${num6} numbers is ${result5}`);
 
 
+// : Task 6: Write an arrow function to check string contains a specific character and return a boolean value.
+const str3 = "Full Stack Developer";
+const specific = (str, char) => {
+    return str.includes(char)
+}
+const result6 = specific(str3, "Ashish");
+console.log(result6);
 
-// : Task 6: Write an arrow function to checkite steing contains a specific character and return a boolean value.
+
 // Activity 4: Function Parameters and Default Values
 // • Task 7: Write a function that takes two parameters and returns their product. Provide a default value for the second parameter.
+const num7 = 12;
+const num8 = 5;
+function product(num7, num8){
+    return num7 * num8;
+}
+const result7 = product(num7, num8);
+console.log(`product of ${num7} and ${num8} is ${result7}`);
+
 // • Task 8: Write a function that takes a person's name and age and returns a greeting message. Provide a default value for the age.
+const personName = "Coder";
+const personAge = 99;
+function greeting(personName, personAge = 88){
+    return `Hi ${personName}! how are you developer? your age is ${personAge}`
+}
+const result8 = greeting(personName);
+console.log(result8);
+
+
+
 // Activity 5: Higher-Order Functions
-// Task 9. tea higherder unition the takes un tine tons a num varue, a als the unst unto no the value, and then apies the second function to the result.
+// Task 9. write high-order function that takes a function and a number, and call function many times.
+function highOrder(func, times){
+    for(let i = 0; i < times; i++){
+        func()
+    }
+}
+function sayHello(){
+    console.log("Hello");
+}
+highOrder(sayHello, 7);
+
+// Task 10. write high-order function that takes two function and a number applies
+//    the first function to the value, then apply the second function to the result. 
+
+
+
+// Question: Create a function that takes a name as a parameter and greets the user. 
+//      If the name is not provided, use "Guest" as the default name.
+function greeting2(name1 = "Guest") {
+    return `Hello! ${name1}`
+}
+const result9 = greeting2("Ashish");
+console.log(result9);
+
+
+
+
 // Feature Request:
 // 1. Even or Odd Function Script: Write a script that includes a function to check if a number is even or odd and logs the result.
 // 2. Square Calculation Function Script: Create a script that includes a function to calculate the square of a number and returns the result.
