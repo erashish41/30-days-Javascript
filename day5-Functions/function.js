@@ -1,4 +1,8 @@
-// // Function
+// // 2 types of Function
+// a.Function declaration : always have name of function and can be hoisted
+
+// b.Function expression : can be anonymous or name of function and can't be hoisted
+
 // Tasks/Activities:
 // Activity 1: Function Declaration
 // : Task 1: Write a function to check if number is even or odd and return the result console.
@@ -70,6 +74,13 @@ const specific = (str, char) => {
 const result6 = specific(str3, "Ashish");
 console.log(result6);
 
+const str4 = "Full Stack Developer";
+const task = (str, char) => {
+    return str.includes(char)
+}
+console.log(task(str4, "hello"));
+
+
 
 // Activity 4: Function Parameters and Default Values
 // • Task 7: Write a function that takes two parameters and returns their product. Provide a default value for the second parameter.
@@ -118,7 +129,46 @@ const result9 = greeting2("Ashish");
 console.log(result9);
 
 
+// find the max number with function 
+function findMax(a,b,c){
+    return Math.max(a,b,c)
+}
+const result10 = findMax(7,8,9);
+console.log(result10);
 
+const arr1 = [ 1,2,3,4,5,6]
+function book(arr1){
+    return Math.max(...arr1)
+}
+const res = book(arr1)
+console.log(res);
+
+
+const arr = [1, 2, 3];
+const a = Math.max(...arr);
+const b = Math.max(arr);
+console.log(a);
+console.log(b);
+
+
+const numbers = [1, 2, 3];
+function add(a, b, c) {
+    return a + b + c;
+}
+console.log(add(...numbers)); // Output?
+
+// find max
+function max(...values) {
+    return Math.max(...values);
+}
+console.log(max(1, 2, 3));       // Output: 3
+console.log(max(...[1, 2, 3])); // Output: 3
+
+const arr3 = [1, 2];
+const arr4 = [3, 4];
+// const result11 = Math.max(...arr3, ...arr4);
+const result11 = Math.max(...arr3.concat(arr4))
+console.log(result11);
 
 // Feature Request:
 // 1. Even or Odd Function Script: Write a script that includes a function to check if a number is even or odd and logs the result.
