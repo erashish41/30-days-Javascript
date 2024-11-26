@@ -183,3 +183,13 @@ console.log(result11);
 // • Create and utilize higher-order functions.
 // • Apply functions to solve common problems and perform calculations.
 // • Enhance code reusability and organization using functions.
+
+
+//  Extra
+// to print number 10 with function
+function print(){
+    for (let i = 0; i < 10; i++) {
+        console.log(i);
+    }
+}
+print()
