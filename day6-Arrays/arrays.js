@@ -3,18 +3,61 @@
 // Activity 1: Array Creation and Access
 
 // • Task 1: create an array of number 1 to 5 and log the array to console.
+const arr1 = [1,2,3,4,5]
+console.log(arr1);
 
+// Task 2: access 1 and last element of array
+const result1 = (arr1[0], arr1[arr1.length - 1]);
+console.log(result1);
+
+const result01 = arr1[arr1.length - 1]
+console.log(result01);
 
 
 // Activity 2: Array Methods (Basic)
-// • Task 3: Use the push method to add a new number to the end of the array and log the updated array.
+// Task 3: Use the push method to add new number to the end of the array and log the updated array.
+const arr2 = [1,2,3,4,5]
+const result2 = arr2.push(9)
+console.log(result2, arr2);
+
 // • Task 4: Use the pop method to remove the last element from the array and log the updated array.
+const arr3 = [1,2,3,4,5]
+const result3 = arr3.pop(1)
+console.log(result3, arr3);
+
 // • Task 5: Use the shift method to remove the first element from the array and log the updated array.
+const arr4 = [99, 88, 77, 66]
+const result4 = arr4.shift()
+console.log(result4, arr4);
+
 // • Task 6: Use the unshift method to add a new number to the beginning of the array and log the updated array.
+const arr5 = [99, 88, 77, 66]
+const result5 = arr5.unshift(11)
+console.log(result5, arr5);
+
+
 // Activity 3: Array Methods (Intermediate)
 // • Task 7: Use the map method to create a new array where each number is doubled and log the new array.
+const arr6 = [2,4,5,1,77]
+const result6 = arr6.map((num, index) =>{
+    return  num * 2
+})
+console.log(result6);
+
 // • Task 8: Use the filter method to create a new array with only even numbers and log the new array.
+const arr7 = [2,4,5,1,77]
+const result7 = arr7.filter((num, index) => {
+    return num%2 === 0
+})
+console.log(result7);
+
 // • Task 9: Use the reduce method to calculate the sum of all numbers in the array and log the result.
+const arr8 = [2,4,5,1,77]
+const result8 = arr8.reduce((acc, curr, index) => {
+    
+})
+
+
 // Activity 4: Array Iteration
 // • Task 10: Use a for loop to iterate over the array and log each element to the console.
 // • Task 11: Use the forEach method to iterate over the array and log each element to the console.
