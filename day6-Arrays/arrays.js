@@ -1,7 +1,6 @@
 // Arrays
 
 // Activity 1: Array Creation and Access
-
 // • Task 1: create an array of number 1 to 5 and log the array to console.
 const arr1 = [1,2,3,4,5]
 console.log(arr1);
@@ -73,8 +72,6 @@ for(let i=0; i<arr9.length; i++){
 }
 console.log(result9);
 
-
-
 // • Task 11: Use the forEach method to iterate over the array and log each element to the console.
 const arr10 = [12,0,24,5,1,77]
 const result10 = arr10.forEach((num)=>{
@@ -85,6 +82,7 @@ const result10 = arr10.forEach((num)=>{
 const result010 = arr10.join(" ")
 console.log(result010);
 
+
 // Activity 5: Multi-dimensional Arrays
 // • Task 12: Create a two-dimensional array (matrix) and log the entire array to the console.
 const arr11 = [[1,2,3,4], [5,6,7,8],[11,22,33]];
@@ -93,7 +91,6 @@ console.log(arr11);
 // or
 const result11 = arr11.flat()
 console.log(result11);
-
 
 // • Task 13: Access and log a specific element from the two-dimensional array.
 const result12 = arr11[1][0]
@@ -112,3 +109,89 @@ console.log(result12);
 // • Transform and aggregate array data using map, filter, and reduce.
 // • Iterate over arrays using loops and iteration methods.
 // • Understand and work with multi-dimensional arrays.
+
+
+// E X T R A
+const cars = ["Saab", "Saab", "Volvo", "Volvo", "Volvo", "BMW", "BMW", "BMW", "BMW"];
+// map
+const lowercase = cars.map((item) => item.toLocaleLowerCase())
+const uppercase = cars.map((item) => item.toUpperCase())
+console.log(lowercase, uppercase);
+
+const result13 = cars.join(" ")
+console.log(result13);
+
+// filter
+const filtercars = cars.filter((item) =>{
+    return item === "Saab"
+})
+console.log(filtercars);
+
+// or
+const onecar = []
+for(let i =0; i<cars.length; i++){
+    if(cars[i] === "Volvo"){
+        onecar.push(cars[i])
+    }
+}
+console.log(onecar);
+
+// count the cars
+// const cars = ["Saab", "Saab", "Volvo", "Volvo", "Volvo", "BMW", "BMW", "BMW", "BMW"];
+const count = { }
+for(let i=0; i<cars.length; i++){
+    let carcount = cars[i]
+    if(count[carcount]){
+        count[carcount] ++
+    }else{
+        count[carcount] = 1
+    }
+}
+console.log(count);
+
+// count with function
+let count1 = 0;
+function carCount(carname){
+    for(let i=0; i<cars.length; i++){
+        console.log(">>>>current car :", cars[i])
+        if(carname === cars[i]){
+            count1 += 1
+        }
+    }
+    return count1
+}
+console.log(carCount("BMW"));
+
+// or
+let count2 = 0;
+function carMap(){
+    let mapinfo = cars.filter((item) => item === "Volvo")
+    return mapinfo;
+}
+const res = carMap();
+console.log(res.length);
+
+// // find min
+const number = [2,6,3,2,1,0,51,6,90,5,6,7,88]
+let minnumber = number[0]
+for(let i=0; i<number.length; i++){
+    if(number[i] < minnumber){
+        minnumber = number[i]
+    }
+}
+console.log(minnumber);
+
+// find max  ---   const number = [2,6,3,2,1,0,51,6,90,5,6,7,88]
+let maxnumber = number[0];
+function maxFind(number){
+    for(let i=0; i<number.length; i++)
+    if(number[i] > maxnumber){
+        maxnumber = number[i]
+    }
+    return maxnumber
+}
+const resluttt = maxFind(number)
+console.log(resluttt);
+
+
+// const cars = ["Saab", "Saab", "Volvo", "Volvo", "Volvo", "BMW", "BMW", "BMW", "BMW"];
