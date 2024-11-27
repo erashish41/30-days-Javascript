@@ -85,11 +85,22 @@ const result10 = arr10.forEach((num)=>{
 const result010 = arr10.join(" ")
 console.log(result010);
 
-
-
 // Activity 5: Multi-dimensional Arrays
 // • Task 12: Create a two-dimensional array (matrix) and log the entire array to the console.
+const arr11 = [[1,2,3,4], [5,6,7,8],[11,22,33]];
+console.log(arr11);
+
+// or
+const result11 = arr11.flat()
+console.log(result11);
+
+
 // • Task 13: Access and log a specific element from the two-dimensional array.
+const result12 = arr11[1][0]
+console.log(result12);
+
+
+
 // Feature Request:
 // 1. Array Manipulation Script: Write a script that demonstrates the creation of an array, adding and removing elements using push, pop, shift, and unshift methods.
 // 2. Array Transformation Script: Create a script that uses map, filter, and reduce methods to transform and aggregate array data.
