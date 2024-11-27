@@ -53,14 +53,40 @@ console.log(result7);
 
 // • Task 9: Use the reduce method to calculate the sum of all numbers in the array and log the result.
 const arr8 = [2,4,5,1,77]
-const result8 = arr8.reduce((acc, curr, index) => {
-    
-})
+const result8 = arr8.reduce((acc, curr) => {
+    return acc + curr;
+}, 0)
+console.log(result8);
 
 
 // Activity 4: Array Iteration
 // • Task 10: Use a for loop to iterate over the array and log each element to the console.
+const arr9 = [12,0,24,5,1,77]
+for(let i=0; i<arr9.length; i++){
+     console.log(arr9[i]);
+}
+
+// or
+const result9 = []
+for(let i=0; i<arr9.length; i++){
+    result9.push(arr9[i])
+}
+console.log(result9);
+
+
+
 // • Task 11: Use the forEach method to iterate over the array and log each element to the console.
+const arr10 = [12,0,24,5,1,77]
+const result10 = arr10.forEach((num)=>{
+    console.log(num);
+})
+
+// or 
+const result010 = arr10.join(" ")
+console.log(result010);
+
+
+
 // Activity 5: Multi-dimensional Arrays
 // • Task 12: Create a two-dimensional array (matrix) and log the entire array to the console.
 // • Task 13: Access and log a specific element from the two-dimensional array.
