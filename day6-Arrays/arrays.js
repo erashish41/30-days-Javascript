@@ -196,3 +196,12 @@ console.log(resluttt);
 
 // array with string
 const carsInfo = ["Tesla","Kia","Ford","Toyota","Audi","Honda","BMW","Audi ","Hyundai","Kia"];  
+function carCount(arr){
+    let count = 0;
+    for(let i=0; i<arr.length; i++){
+        count = count + 1;
+    }
+    return count;
+}
+const resultCount = carCount(carsInfo);
+console.log(resultCount);
