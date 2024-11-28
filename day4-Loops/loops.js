@@ -498,3 +498,31 @@ const resultGreaterThan = greaterThanNumber(newNumber, 22);
 console.log('count 2', resultGreaterThan);
 
 
+// unique     
+const newTwoNumber = [ 12,9,9,6,7,8,1,2,3,400,22,44,55,12,30,0, 3,1, 32, 98]
+function uniqueNumber(num) {
+    let uniqueElements = []
+    for(let i=0; i<num.length; i++){
+        if(!uniqueElements.includes(num[i])){
+            uniqueElements.push(num[i])
+        }
+    }
+    return uniqueElements;
+}
+const resultUnique = uniqueNumber(newTwoNumber);
+// console.log("original input",newNumber);
+
+console.log("new output",resultUnique);
+
+// specific number
+function specificNumber(num, target){
+    let specificElement = []
+    for(let i=0; i<num.length; i++){
+        if(num[i] === target){
+            specificElement.push(num[i]);
+        }
+    }
+    return specificElement;
+}
+const resultSpecific = specificNumber(newTwoNumber, "3")
+console.log(resultSpecific);
