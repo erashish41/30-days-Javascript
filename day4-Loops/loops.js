@@ -511,7 +511,6 @@ function uniqueNumber(num) {
 }
 const resultUnique = uniqueNumber(newTwoNumber);
 // console.log("original input",newNumber);
-
 console.log("new output",resultUnique);
 
 // specific number
