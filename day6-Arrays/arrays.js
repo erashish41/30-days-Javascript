@@ -138,16 +138,16 @@ console.log(onecar);
 
 // count the cars
 // const cars = ["Saab", "Saab", "Volvo", "Volvo", "Volvo", "BMW", "BMW", "BMW", "BMW"];
-const count = { }
+const car_brand_count = { }
 for(let i=0; i<cars.length; i++){
     let carcount = cars[i]
-    if(count[carcount]){
-        count[carcount] ++
+    if(car_brand_count[carcount]){
+        car_brand_count[carcount] += 1
     }else{
-        count[carcount] = 1
+        car_brand_count[carcount] = 1
     }
 }
-console.log(count);
+console.log(">>>>> car_brand_count", car_brand_count);
 
 // count with function
 let count1 = 0;
@@ -194,4 +194,5 @@ const resluttt = maxFind(number)
 console.log(resluttt);
 
 
-// const cars = ["Saab", "Saab", "Volvo", "Volvo", "Volvo", "BMW", "BMW", "BMW", "BMW"];
+// array with string
+const carsInfo = ["Tesla","Kia","Ford","Toyota","Audi","Honda","BMW","Audi ","Hyundai","Kia"];  
