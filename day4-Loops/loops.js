@@ -425,3 +425,76 @@ function oddNumber(arr){
 }
 const oddnumber = oddNumber(nummmm);
 console.log(oddnumber);
+
+
+// find how many times number appears
+ const new_number_input = [ 9,6,7,8,1,2,3,400,22,44,55,12,30,0, 3,1, 32, 98]
+function numberAppears(num, index){
+    let count = 0;
+    for(let i=0; i<num.length; i++){
+        if(num[i] === index){
+            count = count + 1
+       }
+    }
+    return count;
+}
+const appear = numberAppears(nummmm, 1);
+console.log(appear);
+
+// reverse array
+let reversen = []
+function reverseNumber(num){
+    for(let i=0; i<num.length; i++){
+         reversen.unshift(num[i])
+        //  reversen.splice(0, 0, num[i])
+    }
+    return reversen
+}
+const reverese_results = reverseNumber(new_number_input);
+console.log('>>>>>>> i am running >>>>> as input', new_number_input)
+console.log('reverese_results',reverese_results);
+
+
+// or 
+function reverseNumber(num){
+    let newreverse = []
+
+    for(let i= num.length -1; i >=0; i--){
+         newreverse.push(num[i])
+    }
+    return newreverse
+}
+const result01 = reverseNumber(nummmm);
+console.log('count 2', result01);
+
+// greater number
+const newNumber = [ 9,6,7,8,1,2,3,400,22,44,55,12,30,0, 3,1, 32, 98]
+let greaternumber = newNumber[0]
+function greatestNumber(num){
+    for(let i=0; i<num.length; i++){
+        if(num[i] > greaternumber){
+            greaternumber = num[i];
+        }
+    }
+    return greaternumber;
+}
+const greaterResult = greatestNumber(newNumber);
+// console.log("<<<<<<<", newNumber);
+
+console.log(greaterResult);
+
+// greater than
+function greaterThanNumber(num, target){
+    let greaterThan = []
+    for(let i=0; i<num.length; i++){
+        if(num[i] >= target){
+            greaterThan.push(num[i])
+        }
+
+    }
+    return greaterThan;
+}
+const resultGreaterThan = greaterThanNumber(newNumber, 22);
+console.log('count 2', resultGreaterThan);
+
+
