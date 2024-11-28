@@ -33,13 +33,36 @@ while(num3 <= 10){
 }
 console.log("sum of numbers is: ", sum);
 
+
+// Task 3: Write a program to calculate the sum of numbers from 1 to 10 using a while loop.
+let index = 0;
+let summm = 0
+while(index <= 10){
+    summm =+ index
+    index++
+}
+console.log(`sum is:  ${sum}`);
+
+
+
+
+
 // Task 4: Write a program to print the number from 10 to 1 using a while loop.
 let num4 = 10;
 while (num4 > 0) {
     num4 --;
     console.log(num4);
-
 }
+
+
+// while with array
+const arr1 = ["ashish", "rajat", "shivam"]
+let index1 = 0;
+while(index1 < arr1.length){
+    console.log(">>>>>>>",arr1[index1]);
+    index1 = index1 + 1
+}
+
 
 
 // Activity 3: Do...While Loop
@@ -50,6 +73,14 @@ do{
     num5--
 }
 while( num5 >= 1);
+
+
+let num05 = 0;
+do{
+    console.log("========",num05);
+    num05++;
+}while(num05 <= 10)
+
 
 
 // Task 5: Write a program to calculate the factoria of number using a do while loop.
@@ -273,3 +304,124 @@ function findUniqueNumbers(arr) {
       .filter(key => countMap[key] === 1)
       .map(Number); // Convert keys back to numbers
   }
+
+
+
+
+
+//   ---------------------------------
+//print number
+for(let i1=10; i1>0 ; i1--){
+    console.log(i1);   
+}
+
+//multiplye
+for(let i2=1; i2<=5; i2++){
+    console.log(5*i2);   
+}
+
+//sum
+const n = 10;
+let sum11 = 0;
+for(let i=0; i<n; i++){
+    sum11+=i; // sum = sum + i;
+}
+console.log(sum11);
+
+//table
+const n1 = 5;
+for(let i=1; i<10; i++){
+    console.log(n1*i);
+}
+
+// //pattern
+// const n2 = 5;
+// for(let i=1; i<=5; i++){
+//     pattern += "*";   
+// }
+// console.log(pattern);
+
+// or
+const row = 5;
+for(let i=1; i<=5; i++){
+    let pattern = "";
+    for(let j=1; j<=i; j++){
+        pattern += "*";
+    }
+    console.log(pattern);
+}
+
+
+// extra
+const nummmm = [ 9,6,7,8,1,2,3,400,22,44,55,12,30,0, 3,1, 32, 98]
+const sortnum = nummmm.sort((x,y) => y - x)
+console.log(sortnum);
+
+// min
+let minnumber = nummmm[0];
+for(let i=0; i<nummmm.length; i++){
+    if(nummmm[i] < minnumber){
+        minnumber = nummmm[i]
+    }
+}
+console.log(minnumber);
+
+// max
+let maxnumber = nummmm[0];
+function maxNumbe(){
+    for(let i=0; i<nummmm.length; i++){
+        if(nummmm[i] > maxnumber){
+            maxnumber = nummmm[i]
+        }
+    }
+    return maxnumber;
+}
+console.log(maxNumbe(nummmm));
+
+// sum:      const nummmm = [ 9,6,7,8,1,2,3,400,22,44,55,12,30,0, 3,1, 32, 98]
+let sum01 = 0;
+function findSum(arr){
+    for(let i=0; i<arr.length; i++){
+        sum01+= arr[i]
+    }
+    return sum01
+}  
+const result1 = findSum(nummmm);
+console.log(result1);
+
+// average
+let sum010 = 0;
+function averageNumber(arr){
+    for(let i=0; i<arr.length; i++){
+        sum010+= arr[i];
+    }
+    return sum010/arr.length;
+}
+const avgnum = averageNumber(nummmm);
+console.log(avgnum);
+
+// even 
+let even = []
+function evenNumber(arr){
+    for(let i=0; i<arr.length; i++){
+        if(arr[i]%2 === 0){
+            even.push(arr[i])
+        }
+    }
+    return even;
+}
+const evennumber = evenNumber(nummmm);
+console.log(evennumber.sort((x,y)=> x-y));
+
+// odd
+let odd = []
+function oddNumber(arr){
+    for(let i=0; i<arr.length; i++){
+        if(arr[i]%2 !== 0){
+            odd.push(arr[i])
+        }
+    }
+    return odd
+}
+const oddnumber = oddNumber(nummmm);
+console.log(oddnumber);
