@@ -195,13 +195,23 @@ console.log(resluttt);
 
 
 // array with string
-const carsInfo = ["Tesla","Kia","Ford","Toyota","Audi","Honda","BMW","Audi ","Hyundai","Kia"];  
-function carCount(arr){
-    let count = 0;
+const carBrand = ["Tesla","Kia","Ford","Toyota","Audi","Honda","BMW","Audi ","Hyundai","Kia"];
+
+// find the whole array
+function dataCars(arr){
     for(let i=0; i<arr.length; i++){
-        count = count + 1;
+        console.log(arr[i].toString());
+    }
+}
+dataCars(carBrand)
+
+// find the length of array
+function carLength(arr){
+    let count = 0;
+    for (let i = 0; i < arr.length; i++) {
+        count = count + 1;      // count++
     }
     return count;
 }
-const resultCount = carCount(carsInfo);
-console.log(resultCount);
+let carLengthResult = carLength(carBrand);
+console.log(carLengthResult);
