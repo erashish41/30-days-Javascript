@@ -285,7 +285,7 @@ function occureSingleCar(arr, brand){
 let occureCarResult = occureSingleCar(carBrand, "Audi");
 console.log(occureCarResult);
 
-// remove with old element to new element 
+// replace with old element to new element 
 function newCarBrand(arr, oldBrand, newBrand){
     for(let i=0; i<arr.length; i++){
         if(arr[i] === oldBrand){
@@ -294,3 +294,12 @@ function newCarBrand(arr, oldBrand, newBrand){
     }
     return arr; 
 }
+let newCarResult = newCarBrand(carBrand, "Audi", "Tesla");
+console.log(newCarResult);
+
+// sort alphabetically
+function sortArray(arr){
+    return arr.slice().sort()
+}
+let sortArrayResult = sortArray(carBrand);
+console.log(sortArrayResult);
