@@ -195,7 +195,7 @@ console.log(resluttt);
 
 
 // array with string
-const carBrand = ["Tesla","Kia","Ford","Toyota","Audi","Honda","BMW","Audi ","Hyundai","Kia"];
+const carBrand = ["Tesla","Kia","Ford","Toyota","Audi","Honda","BMW","Audi","Hyundai","Kia"];
 
 // find the whole array
 function dataCars(arr){
@@ -215,3 +215,82 @@ function carLength(arr){
 }
 let carLengthResult = carLength(carBrand);
 console.log(carLengthResult);
+
+
+// unique 
+function uniqueBrand(arr){
+    let uniqueCars = [];
+    for(let i=0; i<arr.length; i++){
+        if(!uniqueCars.includes(arr[i])){
+            uniqueCars.push(arr[i])
+        }
+    }
+    return uniqueCars;
+}
+let uniqueBrandResult = uniqueBrand(carBrand);
+console.log(uniqueBrandResult);
+
+// occurence of each element
+function occurenceEachBrand(arr){
+    let occuredBrand = {}
+    for(let i=0; i<arr.length; i++){
+        let brand = arr[i]
+        if(occuredBrand[brand]){
+            occuredBrand[brand]++;
+        }else{
+            occuredBrand[brand] = 1;
+        }
+    }
+    return occuredBrand;
+}
+let occuredBrandResult = occurenceEachBrand(carBrand);
+console.log(occuredBrandResult);
+
+// occured spicific elenent
+function specificCarBrand(arr, element){
+    let specificCar = [];
+    for(let i=0; i<arr.length; i++){
+        if(arr[i] === element){
+            specificCar.push(arr[i])
+        }
+    }
+    return specificCar
+}
+let specificCarResult = specificCarBrand(carBrand, "Kia");
+console.log(specificCarResult);
+
+// find the first index of car
+// const carBrand = ["Tesla","Kia","Ford","Toyota","Audi","Honda","BMW","Audi","Hyundai","Kia"];
+function firstIndexOfCar(arr, brand){
+    for(let i =0; i<arr.length; i++){
+        if(arr[i] === brand){
+            return i;
+        }
+    }
+    return -1;
+}
+let firstIndexResult = firstIndexOfCar(carBrand, "Audi");
+console.log(firstIndexResult);
+
+// all occurence of single element
+function occureSingleCar(arr, brand){
+    let singleCarOccure = [];
+    for(let i =0; i<arr.length; i++){
+        if(arr[i] === brand){
+            singleCarOccure.push(i)
+        }
+    }
+    return singleCarOccure;
+}
+let occureCarResult = occureSingleCar(carBrand, "Audi");
+console.log(occureCarResult);
+
+// remove with old element to new element 
+function newCarBrand(arr, oldBrand, newBrand){
+    for(let i=0; i<arr.length; i++){
+        if(arr[i] === oldBrand){
+            arr[i] = newBrand
+        }
+    }
+    return arr; 
+}
