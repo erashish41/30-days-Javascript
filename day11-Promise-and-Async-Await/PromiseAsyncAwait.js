@@ -70,8 +70,8 @@ sequenceFetchingData(1)
 function resolveAfterTwoSecond(){
     return new Promise((resolve) =>{
         setTimeout(() => {
-            resolve("Promise resolved after 2 second")
-        }, 2000)
+            resolve("Promise resolved after 3 second")
+        }, 3000)
     })
 }
 
@@ -83,8 +83,76 @@ async function asyncAwaitWithPromise() {
 }
 asyncAwaitWithPromise()
 
+// Task 5: Write an async function that handles a rejected promise using try-catch and log message.
+function rejectAfterTwoSecond(){
+    return new Promise((reject) => {
+        setTimeout(() => {
+            reject("Promise rejected after 4 second")
+        }, 4000)
+    })
+}
+async function asyncAwaitWithTryCatch(){
+    console.log("waiting for the promise to reject..");
+    try{
+        const message1 = await rejectAfterTwoSecond();
+        console.log(message1);
+    }catch(error){
+        console.log("something went wrong please check code..", error);    
+    }
+}
+asyncAwaitWithTryCatch()
+
+
+
 // Activity 4: Fetching Data from an API
-// Task 7: Use the fetch APito get data from a public Al and log the response data to the console using arom /await.
+// Task 6: Use the fetch APi to get data from a public API and log the response data to the console using promise.
+function fetchDataWithPromis(){
+    const apiUrl = "https://fakestoreapi.com/products";
+
+
+    fetch(apiUrl)
+        .then((response) => {  
+            // response: This is the HTTP response object from the server. It contains information like the status code, headers, and body.
+            if(!response.ok){
+                throw new error("HTTP error!, please check it..")
+            }
+            return response.json();
+        })
+        .then((data) => {
+            console.log("data fetch successfully", data);
+        })
+        .catch((error) =>{
+            console.log("error occured..", error);
+    })
+}
+fetchDataWithPromis();
+
+// Task 7: Use the fetch APi to get data from a public API and log the response data to the console using async /await.
+async function fetchDataWithAsyncAwait(){
+    const newApiUrl = "https://fakestoreapi.com/products";
+
+    fetch(newApiUrl)
+    .then((response) => {
+        if(!response.ok){
+            throw new error("code ni chal reha")
+        }
+        return response.json();
+
+    })
+    .then((data) =>{
+        console.log("hello", data);
+        
+    }).catch((error) =>{
+        console.log(error);
+        
+    })
+    
+}
+
+fetchDataWithAsyncAwait()
+
+
+
 // Activity 5: Concurrent Promises
 // • Task 8: Use Promise.all to wait for multiple promises to resolve and then log all their values.
 // • Task 9: Use Promise, race to log the value of the first promise that resolves among multiple promises.
