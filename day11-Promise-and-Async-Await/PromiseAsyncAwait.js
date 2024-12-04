@@ -128,28 +128,22 @@ function fetchDataWithPromis(){
 fetchDataWithPromis();
 
 // Task 7: Use the fetch APi to get data from a public API and log the response data to the console using async /await.
-async function fetchDataWithAsyncAwait(){
+async function ashishBhardwaj(){
     const newApiUrl = "https://fakestoreapi.com/products";
 
     fetch(newApiUrl)
-    .then((response) => {
-        if(!response.ok){
-            throw new error("code ni chal reha")
-        }
-        return response.json();
-
-    })
-    .then((data) =>{
-        console.log("hello", data);
-        
-    }).catch((error) =>{
-        console.log(error);
-        
-    })
-    
+        .then((response) => {
+            if(!response.ok){
+                return response.json()
+            }
+        })
+        .then((data) => {
+            console.log(data);
+        })
+        .catch((error) =>{
+            console.log(error);
+        })
 }
-
-fetchDataWithAsyncAwait()
 
 
 
