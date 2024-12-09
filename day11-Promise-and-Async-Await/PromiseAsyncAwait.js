@@ -168,7 +168,7 @@ ashishBhardwaj()
 
 
 // E X T R A
-// with map and forEach method
+// with map and forEach method do different
 async function fetchApi(){
     const apiUrl = "https://jsonplaceholder.typicode.com/posts";
 
@@ -202,3 +202,60 @@ async function fetchApi(){
 }
 fetchApi()
 
+
+// with map and forEach method do in same without Promise variable
+async function fetchNewApi(){
+    await new Promise((response) =>{
+        setTimeout(() => {
+            console.log("hello, kida ki hal chal after 7 sec"); // log will show after 7 sec
+            response()
+        }, 7000);
+    })
+    const newApiUrl = "https://api.escuelajs.co/api/v1/products"
+
+    try{
+        const response = await fetch(newApiUrl);
+        console.log("new api response is here: ",response);
+
+        const data = await response.json();
+        console.log("new api data is here: ",data);
+        
+    }catch(error){
+        console.log(error);
+        
+    }
+}
+fetchNewApi();
+
+// with map and forEach method do in same with Promise variable
+async function fetchNewApiWithPromise(){
+    const promise = new Promise((resolve) =>{
+        setTimeout(() => {
+            resolve("kida resolve kita k ni 9 sec bd")
+        }, 9000);
+    })
+
+    const apiNewUrl = "https://api.escuelajs.co/api/v1/products";
+
+   try{
+        const response = await fetch(apiNewUrl);
+        console.log(response);
+            if(!response.ok){
+                throw new Error(`error occured, please check ${response.status}`)
+            }
+        const data = await response.json();
+        console.log(data);
+        
+        const title = [];
+        data.map((items) =>{
+            return title.push(items.title)
+        })
+        console.log(title);
+        
+        
+   }catch(error){
+    console.log(error);
+   }
+    
+}
+fetchNewApiWithPromise()
