@@ -78,70 +78,76 @@ async function waitForPromise(){
 waitForPromise();
 
 
-// // Task 5: Write an async function that handles a rejected promise using try-catch and log message.
-// function rejectAfterTwoSecond(){
-//     return new Promise((reject) => {
-//         setTimeout(() => {
-//             reject("Promise rejected after 4 second")
-//         }, 4000)
-//     })
-// }
-// async function asyncAwaitWithTryCatch(){
-//     console.log("waiting for the promise to reject..");
-//     try{
-//         const message1 = await rejectAfterTwoSecond();
-//         console.log(message1);
-//     }catch(error){
-//         console.log("something went wrong please check code..", error);    
-//     }
-// }
-// asyncAwaitWithTryCatch()
+// Task 5: Write an async function that handles a rejected promise using try-catch and log message.
+function rejectAfterTwoSecond(){
+    return new Promise((reject) => {
+        setTimeout(() => {
+            reject("Promise rejected after 4 second")
+        }, 4000)
+    })
+}
+async function asyncAwaitWithTryCatch(){
+    console.log("waiting for the promise to reject..");
+    try{
+        const message1 = await rejectAfterTwoSecond();
+        console.log(message1);
+    }catch(error){
+        console.log("something went wrong please check code..", error);    
+    }
+}
+asyncAwaitWithTryCatch()
 
 
 
-// // Activity 4: Fetching Data from an API
-// // Task 6: Use the fetch APi to get data from a public API and log the response data to the console using promise.
-// function fetchDataWithPromis(){
-//     const apiUrl = "https://fakestoreapi.com/products";
 
 
-//     fetch(apiUrl)
-//         .then((response) => {  
-//             // response: This is the HTTP response object from the server. It contains information like the status code, headers, and body.
-//             if(!response.ok){
-//                 throw new error("HTTP error!, please check it..")
-//             }
-//             return response.json();
-//         })
-//         .then((data) => {
-//             console.log("data fetch successfully", data);
-//         })
-//         .catch((error) =>{
-//             console.log("error occured..", error);
-//     })
-// }
-// fetchDataWithPromis();
+// Activity 4: Fetching Data from an API
+// Task 6: Use the fetch APi to get data from a public API and log the response data to the console using promise.
+function fetchDataWithPromis(){
+    const apiUrl = "https://fakestoreapi.com/products";
 
-// // Task 7: Use the fetch APi to get data from a public API and log the response data to the console using async /await.
-// async function ashishBhardwaj(){
-//     try{
-//         const response = await fetch('https://jsonplaceholder.typicode.com/posts')
 
-//         if(!response.ok){
-//             throw new error("error occured...")
-//         }
-//         const data = await response.json();
-//         console.log(data);
-//     }catch(error){
-//         console.log(error);
+    fetch(apiUrl)
+        .then((response) => {  
+            // response: This is the HTTP response object from the server. It contains information like the status code, headers, and body.
+            if(!response.ok){
+                throw new error("HTTP error!, please check it..")
+            }
+            return response.json();
+        })
+        .then((data) => {
+            console.log("data fetch successfully", data);
+        })
+        .catch((error) =>{
+            console.log("error occured..", error);
+    })
+}
+fetchDataWithPromis();
+
+// Task 7: Use the fetch APi to get data from a public API and log the response data to the console using async /await.
+async function ashishBhardwaj(){
+    try{
+        const response = await fetch('https://jsonplaceholder.typicode.com/posts')
+
+        if(!response.ok){
+            throw new error("error occured...")
+        }
+        const data = await response.json();
+        console.log(data);
+    }catch(error){
+        console.log(error);
         
-//     }
-// }
-// ashishBhardwaj()
+    }
+}
+ashishBhardwaj()
 
 
 // // Activity 5: Concurrent Promises
 // // • Task 8: Use Promise.all to wait for multiple promises to resolve and then log all their values.
+
+
+
+
 // // • Task 9: Use Promise, race to log the value of the first promise that resolves among multiple promises.
 // // Feature Request:
 // // 1. Promise Creation Script: Write a script that demonstrates creating and handling promises, including both resolved and rejected states.
@@ -156,3 +162,43 @@ waitForPromise();
 // // • Use async/await to handle asynchronous code more readably.
 // // • Fetch data from public APls using both promises and async/await.
 // // • Manage multiple concurrent promises using Promise.all and Promise.race.
+
+
+
+
+
+// E X T R A
+// with map and forEach method
+async function fetchApi(){
+    const apiUrl = "https://jsonplaceholder.typicode.com/posts";
+
+    try{
+        const response = await fetch(apiUrl);
+        console.log(response);
+
+        if(!response.ok){
+            throw new Error(`error occured in it, please check it ${response.status}`)
+        }
+
+        const data = await response.json();
+        console.log(data);
+        console.log(data.length);
+
+        // with map method
+        const idsOfData = data.map(items => items.userId)
+        console.log(idsOfData);
+
+        // or with forEach method
+        const idsOfDataWithforEach = [];
+        data.forEach((items) =>{
+            idsOfDataWithforEach.push(items.id)
+        })
+        console.log(idsOfDataWithforEach);
+                
+    }catch(error){
+        console.log(error);
+    }
+    
+}
+fetchApi()
+
