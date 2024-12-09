@@ -58,29 +58,25 @@ sequenceFetchingData(1)
         console.log(message3);
     })
     .catch((error) =>{
-        console.log("an error occured", error);
-        
-    })
+        console.log("an error occured", error); 
+})
 
 
  
-// // Activity 3: Using Async/Await
-// // Task 4: Write an async function that waits for a promise to resolve and log message.
-// function resolveAfterTwoSecond(){
-//     return new Promise((resolve) =>{
-//         setTimeout(() => {
-//             resolve("Promise resolved after 3 second")
-//         }, 3000)
-//     })
-// }
+// Activity 3: Using Async/Await
+// Task 4: Write an async function that waits for a promise to resolve and log message.
+async function waitForPromise(){
+    const monall = new Promise((resolve) =>{
+        setTimeout(() => {
+            resolve("kida ho gyea k ni, after 3 sec");
+        }, 3000);
+    })
 
-// // note: async function always return Promise
-// async function asyncAwaitWithPromise() {
-//     console.log("waiting for the promise to resolve..");
-//     const message = await resolveAfterTwoSecond();
-//     console.log(message);
-// }
-// asyncAwaitWithPromise()
+    const resultFinal = await monall;
+    console.log(resultFinal);
+}
+waitForPromise();
+
 
 // // Task 5: Write an async function that handles a rejected promise using try-catch and log message.
 // function rejectAfterTwoSecond(){
