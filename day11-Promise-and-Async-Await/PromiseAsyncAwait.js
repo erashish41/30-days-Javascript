@@ -234,6 +234,9 @@ async function fetchNewApiWithPromise(){
             resolve("kida resolve kita k ni 9 sec bd")
         }, 9000);
     })
+    const message = await promise;
+    console.log(message);
+    
 
     const apiNewUrl = "https://api.escuelajs.co/api/v1/products";
 
@@ -251,11 +254,8 @@ async function fetchNewApiWithPromise(){
             return title.push(items.title)
         })
         console.log(title);
-        
-        
    }catch(error){
     console.log(error);
-   }
-    
+   }   
 }
 fetchNewApiWithPromise()
