@@ -193,3 +193,43 @@ function print(){
     }
 }
 print()
+
+// 1. Write a JavaScript function that reverses a number.
+const number1 = 32243;
+function reverseNumber(item){
+    return ouptut1 = item.toString().split('').reverse().join()
+         
+}
+console.log(reverseNumber(number1));
+
+// 2. Write a JavaScript function that checks whether a passed string is a palindrome or not?
+
+
+
+
+
+
+// extra - 
+// a. 1st function in 2nd function 
+function one(){
+    console.log("hello one")
+}
+function two(newFunction){
+    console.log("hello three");
+    newFunction();
+    console.log("hello two");
+}
+two(one)
+
+
+console.log("----------------");
+
+// b. 2nd function in 1st function 
+function newOne(oldFunction){
+    console.log("hello 1");
+    oldFunction()
+}
+function newTwo(){
+    console.log("hello 2");
+}
+newOne(newTwo)
