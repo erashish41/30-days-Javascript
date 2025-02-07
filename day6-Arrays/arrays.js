@@ -382,3 +382,40 @@ console.log(resultCa);
 const arrayD = [40, 100, 1, 5, 25, 10];
 const resultDa = arrayD.sort();
 console.log(resultDa);
+
+const resultDb = arrayD.sort(function(a,b){return a-b});
+console.log(resultDb);
+
+const resultDc = arrayD.sort(function(a,b){ return b-a});
+console.log(resultDc);
+
+// sorting array with object
+const carsArray = [{type:"Volvo", year:2016}, {type:"Saab", year:2001}, {type:"BMW", year:2010}];
+const resultCara = carsArray.sort((a,b) => (a.type.localeCompare(b.type)));
+console.log(resultCara);
+
+
+const myArr = [
+    {name:"X19",price:120 },
+    {name:"X01",price:100 },
+    {name:"X02",price:100 },
+    {name:"X03",price:100 },
+    {name:"X04",price:110 },
+    {name:"X05",price:110 },
+    {name:"X06",price:110 },
+    {name:"X07",price:110 },
+    {name:"X08",price:120 },
+    {name:"X99",price:120 },
+    {name:"X10",price:120 },
+    {name:"X11",price:120 },
+    {name:"X12",price:130 },
+    {name:"X13",price:130 },
+    {name:"X14",price:130 },
+    {name:"X15",price:130 },
+    {name:"X16",price:140 },
+    {name:"X17",price:140 },
+    {name:"X18",price:140 },
+    {name:"X00",price:140 }
+];
+const resultAr = myArr.sort((a,b) => a.name.localeCompare(b.name));
+console.log(myArr);
