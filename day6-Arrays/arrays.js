@@ -303,3 +303,82 @@ function sortArray(arr){
 }
 let sortArrayResult = sortArray(carBrand);
 console.log(sortArrayResult);
+
+
+// extra basic of array
+let arrayA = ["Ashish", "Rajat", "Shivam","Gurmeet", "Akash"];
+const resultAa = arrayA[0];
+console.log(resultAa)
+
+arrayA[5] = "African"
+console.log(arrayA)
+
+const resultAb = arrayA.toString();
+console.log(resultAb)
+
+const resultAc = typeof arrayA;
+console.log(resultAc)
+
+const resultAd = Date.now();
+console.log(typeof resultAd)
+
+const resultAe = Date.now;
+console.log(typeof resultAe)
+
+const resultAf = arrayA.length;
+console.log("length of array is ",resultAf)
+
+// let arrayA = ["Ashish", "Rajat", "Shivam","Gurmeet", "Akash"];
+arrayA[10] = "kida";
+console.log(arrayA)
+
+const resultAg = Array.isArray(arrayA);
+console.log(resultAg)
+
+const resultAh = arrayA.at(4);
+console.log(resultAh);
+
+const resultAi = arrayA.join();
+console.log(resultAi);
+
+const resultAj = arrayA.pop();
+console.log(resultAj)
+
+arrayA[arrayA.length] = "chikku"
+console.log(arrayA);
+
+const resultAk = arrayA.splice(2,0, "hello", "ki");
+console.log(resultAk);
+
+let arrayB = ["Suzuki", "Dodge", "Toyota","Nissan", "Byd", "Dodge"];
+const resultBa = arrayB.toSpliced(2,0, "ki", "hello");
+console.log(resultBa);
+
+const resultBb = arrayB.indexOf("pen");
+console.log("indexOf pen is ",resultBb);
+
+const resultBc = arrayB.at(2);
+console.log(resultBc);
+
+const resultBd = arrayB.indexOf("Dodge");
+console.log("indexOf Dodge is ",resultBd);
+
+const resultBe = arrayB.indexOf("Dodge");
+console.log("last index of Dodge is",resultBe);
+
+const resultBf = arrayB.sort();
+console.log("sorting of array is ",resultBf);
+
+const resultBfd = arrayB.toSorted();
+console.log("sosssrting of array is ",resultBfd);
+
+const resultBg = arrayB.reverse();
+console.log("reverse of array is ",resultBf);
+
+const arrayC = [[1,2,3], [4,5,6], [7,8,9]]
+const resultCa = arrayC.flat();
+console.log(resultCa);
+
+const arrayD = [40, 100, 1, 5, 25, 10];
+const resultDa = arrayD.sort();
+console.log(resultDa);
