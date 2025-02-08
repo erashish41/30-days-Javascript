@@ -54,3 +54,54 @@ console.log(resultSq)
 
 let resultSr = stringA.indexOf("Bhardwaj")
 console.log(resultSr)
+
+// let stringA = "Ashish Bhardwaj";
+// find how many times "a" comes
+let count = 0;
+for(let i=0; i<stringA.length; i++){
+    if(stringA[i].toLowerCase() === "a"){
+        count ++;
+    }
+}
+console.log("a comes for ", count);
+
+// or
+let countA = 0;
+for(let char of stringA.toLowerCase()){
+    if(char === "a"){
+        countA ++;
+    }
+}
+console.log("count for a is ", countA);
+
+// How can you check if the string contains the word "Bhardwaj"?
+const resultSs = stringA.includes("Bhardwaj");
+console.log(resultSs);
+
+// How can you extract "Ashish" from the string?
+const resultSt = stringA.slice(0,6);
+console.log("extracted string ",resultSt);
+
+const resultSu = stringA.slice(6,15);
+console.log(resultSu);
+
+console.log(stringA.length);
+
+// replace "Ashish" with "John"
+const resultSv = stringA.replace("Ashish", "John");
+console.log("Ashish replaced with John - ",resultSv);
+
+const resultSw = stringA.split();
+console.log(resultSw);
+
+// occurrence
+const resultSx = stringA.toLowerCase().indexOf("a")
+console.log("first occurrence of a is ", resultSx);
+
+const resultSy = stringA.toLowerCase().lastIndexOf("a");
+console.log("last occurrence of a is ",resultSy);
+
+// count the "a" letter how many times come
+const resultSz = stringA.split();
+console.log(resultSz);
+
