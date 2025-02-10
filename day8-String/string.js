@@ -101,7 +101,48 @@ console.log("first occurrence of a is ", resultSx);
 const resultSy = stringA.toLowerCase().lastIndexOf("a");
 console.log("last occurrence of a is ",resultSy);
 
-// count the "a" letter how many times come
-const resultSz = stringA.split();
-console.log(resultSz);
 
+const resultSz = stringA.startsWith("Ash");
+console.log("starts with Ash",resultSz);
+
+const resultSaa = stringA.endsWith("j");
+console.log(resultSaa);
+
+// first occurrence of "h"
+const resultSab = stringA.lastIndexOf("h");
+console.log(resultSab);
+
+// split into word
+const resultSac = stringA.split(" ");
+console.log(resultSac);
+
+// character
+const resultSad = stringA.split("");
+console.log(resultSad);
+
+// How do I join an array ["Ashish", "Bhardwaj"] back into a string?
+let arr = ["Ashish", "Bhardwaj"];
+const resultSae = arr.join(" ");
+console.log("back array to string - ", resultSae)
+
+const resultSaf = stringA.split("").reverse().join("")
+console.log(resultSaf);
+
+// remove and count  "h"
+const resultSag = stringA.split("h").join("")
+console.log("remove h - ", resultSag);
+
+const resultSah = stringA.split("h").length-1;
+console.log("count of h is - ",resultSah);
+
+
+const stringNew = "Ashish Bhardwaj from Gurdaspur in Punjab 143521"
+const vowel = ["a", "e", "i", "o", "u"];
+let vowelFounds = [];
+
+for(let char of stringNew.toLocaleLowerCase()) {
+    if(vowel.includes(char)){
+        vowelFounds.push(char);
+    }
+}
+console.log(vowelFounds);
