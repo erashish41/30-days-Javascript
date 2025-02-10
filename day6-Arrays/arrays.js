@@ -140,21 +140,21 @@ console.log(onecar);
 // const cars = ["Saab", "Saab", "Volvo", "Volvo", "Volvo", "BMW", "BMW", "BMW", "BMW"];
 const car_brand_count = { }
 for(let i=0; i<cars.length; i++){
-    let carcount = cars[i]
-    if(car_brand_count[carcount]){
-        car_brand_count[carcount] += 1
+    let carCount = cars[i]
+    if(car_brand_count[carCount]){
+        car_brand_count[carCount] += 1
     }else{
-        car_brand_count[carcount] = 1
+        car_brand_count[carCount] = 1
     }
 }
 console.log(">>>>> car_brand_count", car_brand_count);
 
 // count with function
 let count1 = 0;
-function carCount(carname){
+function carCount(carName){
     for(let i=0; i<cars.length; i++){
         console.log(">>>>current car :", cars[i])
-        if(carname === cars[i]){
+        if(carName === cars[i]){
             count1 += 1
         }
     }
@@ -419,3 +419,28 @@ const myArr = [
 ];
 const resultAr = myArr.sort((a,b) => a.name.localeCompare(b.name));
 console.log(myArr);
+
+// chatgpt questions
+const fruits = ["Apple", "Banana", "Cherry", "Mango", "Orange", "Pear", "Grapes", "Cherry", "Apple", "kiwi"];
+const accessThird = fruits[3];
+console.log(accessThird);
+
+const addEle = fruits.push("Papaya");   // add in last
+console.log(addEle, fruits);
+
+const removeEle = fruits.shift();
+console.log(removeEle, fruits);
+
+let presentApple = [];
+for(let i=0; i<fruits.length; i++){
+    if(fruits[i] === "Cherry"){
+        presentApple.push(fruits[i])
+    }
+}
+console.log('count apple - ',presentApple);
+
+let sortArrayEle = fruits.sort((a,b) => a.toLowerCase().localeCompare(b.toLowerCase()));
+console.log('array sortted - ',sortArrayEle);
+
+
+
