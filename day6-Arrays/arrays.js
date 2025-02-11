@@ -444,3 +444,78 @@ console.log('array sortted - ',sortArrayEle);
 
 
 
+console.log("-------------------**-------------------");
+// sum of arrays
+let newArray = [9999, 45, 123, 7321, 567, 875, 3, 980, 45, 10234, 11, 0, 32, 45, 9999, 5982, 89];
+let arraySum = 0;
+for(let i=0; i<newArray.length; i++){
+    arraySum += newArray[i];
+
+    console.log(`sum of ${newArray[i]} is - ${arraySum}`);
+}
+
+// count the element of array
+let countElements = {};
+for(let i=0; i<newArray.length; i++){
+;
+    if(countElements[newArray[i]]){
+        countElements[newArray[i]] ++;
+    }else{
+        countElements[newArray[i]] = 1;
+    }
+}
+console.log(countElements);
+
+//max number
+let maxArray = newArray[0];
+for(let i=0; i<newArray.length; i++){
+    if(maxArray < newArray[i] ){
+        maxArray = newArray[i];
+    }
+}
+console.log("max number is - ",maxArray);
+
+// min number
+let minArray = newArray[0];
+for(let i=0; i<newArray.length; i++){
+    if(minArray > newArray[i]){
+        minArray = newArray[i];
+    }
+}
+console.log("min number is - ", minArray);
+
+//even number
+let evenArrays = [];
+let oddArrays = [];
+for(let i=0; i<newArray.length; i++){
+    if(newArray[i]%2 == 0){
+        evenArrays.push(newArray[i]);
+        console.log(`number is even ${newArray[i]}`);
+    }else if(newArray[i]%2 !=0){
+        oddArrays.push(newArray[i]);
+        console.log(`number is even ${newArray[i]}`);
+    }else{
+        console.log(`number is negative ${newArray[i]}`);
+    }
+}
+console.log(`even arrays are - ${evenArrays}`, `odd arrays are - ${oddArrays}`);
+
+//// remove duplicate number in array
+let duplicateArray = [];
+for(let i=0; i<newArray.length; i++){
+    let dupArr = newArray[i];
+    if(!duplicateArray.includes(dupArr)){    //includes returns boolean value
+        duplicateArray.push(dupArr);
+    }
+}console.log("no duplicate array - ",duplicateArray);
+console.log(newArray.length);
+
+
+// let newArray = [9999, 45, 123, 7321, 567, 875, 3, 980, 45, 10234, 11, 0, 32, 45, 9999, 5982, 89];
+// let duplicateArray = [];
+// for(let i=0; i<newArray.length; i++){
+//     if(duplicateArray[newArray[i]]){
+//         duplicateArray[newArray[i]] ++
+//     }
+// }
+// console.log(duplicateArray);

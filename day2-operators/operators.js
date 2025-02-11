@@ -114,10 +114,22 @@ const compare5 = (num9, num10) => {
 }
 console.log(compare5(100, 500));
 
+// Task 13: Write a program that uses the ! operator to negate a condition and log the result to the console.
+function isNotEqual(number11){
+    return !(number11 % 2 == 0);
+}
+console.log(isNotEqual(61));
 
-// • Task 13: Write a program that uses the ! operator to negate a condition and log the result to the console.
+
 // Activity 5: Ternary Operator
-// • Task 14: Write a program that uses the ternary operator to check if a number is positive or negative and log the result to the console.
+// Task 14: Write a program that uses the ternary operator to check if a number is positive or negative and log the result to the console.
+function ternaryOpertaor(number12){
+    return number12 > 0 ? `number is postive, ${number12}` : `number is negative, ${number12}`
+}
+console.log(ternaryOpertaor(-41));
+
+
+
 // Feature Request:
 // 1. Arithmetic Operations Script: Write a script that performs basic arithmetic operations (addition, subtraction, multiplication, division, remainder) on two numbers and logs the results.
 // 2. Comparison and Logical Operators Script: Create a script that compares two numbers using different comparison operators and combines conditions using logical operators, logging the results.
