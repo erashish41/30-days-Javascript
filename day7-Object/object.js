@@ -128,3 +128,46 @@ Object.values(oddbook1).forEach((values)=>[
 // • Understand and use the this keyword in object methods.
 // • Work with nested objects and arrays of objects.
 // • Iterate over an object's properties using loops and built-in methods.
+
+
+// basic of object
+const person = {};
+person.firstName = "Ashish";
+person.lastName = "Bhardwaj";
+person.age = 31;
+person.designation = "Frontend Developer";
+person.location = "Chandigarh";
+console.log("person data - ", person.firstName, person.lastName);
+console.log("person's age - ",person["age"]);
+
+console.log(person);
+
+delete person.age;
+console.log(person);
+
+// nested object inside other object
+const personOne = {
+    firstName: "Rajat",
+    secondName: "Sharma",
+    age: 30,
+    personCar : {
+        carBrand: "Toyoto",
+        carColor: "White",
+        carName: "Hilux"
+    }
+}
+console.log(personOne.personCar.carBrand);
+console.log(personOne.personCar["carColor"]);
+console.log(personOne["personCar"]["carName"]);
+// console.log(personOne[personCar][carName]);
+
+// object method(functions) are stored as property value
+const personInfo = {
+    firstName: "Ashish",
+    lastName: "Bhardwaj",
+    age: 31,
+    fullName: function(){
+        return this.firstName + " " + this.lastName;    //this refers to personInfo object
+    }
+}
+console.log(personInfo.fullName());
