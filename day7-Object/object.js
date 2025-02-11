@@ -166,8 +166,31 @@ const personInfo = {
     firstName: "Ashish",
     lastName: "Bhardwaj",
     age: 31,
+    city: "Chandigarh",
     fullName: function(){
-        return this.firstName + " " + this.lastName;    //this refers to personInfo object
+        return this.firstName + " " + this.lastName;    
     }
+    //this refers to personInfo object
 }
 console.log(personInfo.fullName());
+
+//Displaying the Object Properties by name
+console.log(personInfo.firstName, personInfo.lastName, personInfo.age, personInfo.city);
+
+console.log("----------------%%%%---------------");
+
+// Displaying the Object Properties in a Loop
+const objLoop = [];
+for(let obj in personInfo){
+    objLoop.push(`${obj} : ${personInfo[obj]}`)
+}
+console.log(objLoop);
+
+// Displaying the Object using Object.values()
+const objValue = Object.values(personInfo)
+console.log(objValue);
+
+
+// Displaying the Object using JSON.stringify()
+const jsonObj = JSON.stringify(personInfo);
+console.log(jsonObj);
