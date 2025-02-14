@@ -129,22 +129,22 @@ const fetchProducts = () => {
                 // console.log(productsData[i].brand);
             }
 
-            const categoryDisplay = getByCategory("groceries");
+            const categoryDisplay = getByCategory(productsData,"groceries");
             console.log("category to display ----- ",categoryDisplay);
 
-            const brandDisplay = getByBrand("Essence");
+            const brandDisplay = getByBrand(productsData,"Essence");
             // console.log("brand to display -- ",brandDisplay);
 
-            const stockDisplay = getByStock(70);
+            const stockDisplay = getByStock(productsData,70);
             console.log("stock to display -- ", stockDisplay);
             
-            const availabilityDisplay = getByAvailabilityStatus("In Stock");
+            const availabilityDisplay = getByAvailabilityStatus(productsData,"In Stock");
             console.log("availability status are -- ", availabilityDisplay);
 
             const randomDiscount = Math.floor(Math.random() * 10);
             console.log("random discount to filter by -- ", randomDiscount);
             
-            const discountDisplay = getByDiscountPercentage(randomDiscount);
+            const discountDisplay = getByDiscountPercentage(productsData,randomDiscount);
             console.log("discount to display -- ", discountDisplay);
 
             
@@ -156,4 +156,4 @@ const fetchProducts = () => {
 }
 
 
-fetchProducts();
+fetchProducts()
