@@ -55,6 +55,9 @@
 //         })
 // }
 // fetchProducts()
+
+
+
 function getByCategory(category) {
     const categoryResult = [];
     for(let i=0; i<productsData.length; i++){
@@ -99,10 +102,10 @@ function getByAvailabilityStatus(stock){
     return availabilityResult;
 }
 
-function getByDiscountPercentage(discount){
+function getByDiscountPercentage(number){
     const discountResult = [];
     for(let i=0; i<productsData.length; i++){
-        if(productsData[i].discountPercentage <=  discount){
+        if(productsData[i].discountPercentage <=  number){
             discountResult.push(productsData[i])
         }
     }
@@ -137,11 +140,15 @@ const fetchProducts = () => {
             
             const availabilityDisplay = getByAvailabilityStatus("In Stock");
             console.log("availability status are -- ", availabilityDisplay);
-            
-            const discountDisplay = getByDiscountPercentage(10);
-            console.log("discount to display -- ", discountDisplay);
-            
 
+            const randomDiscount = Math.floor(Math.random() * 10);
+            console.log("random discount to filter by -- ", randomDiscount);
+            
+            const discountDisplay = getByDiscountPercentage(randomDiscount);
+            console.log("discount to display -- ", discountDisplay);
+
+            
+            
         })
         .catch((error) => {
             console.log("error occurred -- ", error.message);
